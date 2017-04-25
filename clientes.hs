@@ -55,7 +55,7 @@ nuevasBebidas unasBebidas cliente =
     bebidas = unasBebidas
   }
 
-
+tomar bebida = agregarBebida bebida . bebida
 
 
 
