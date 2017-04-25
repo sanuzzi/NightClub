@@ -47,6 +47,13 @@ rescatarse tiempo
   | tiempo > 3 = aumentarResistencia 200
   | otherwise = aumentarResistencia 100
 
+agregarBebida unaBebida cliente =
+  nuevasBebidas (unaBebida : bebidas cliente) cliente
+
+nuevasBebidas unasBebidas cliente =
+  cliente {
+    bebidas = unasBebidas
+  }
 
 
 
