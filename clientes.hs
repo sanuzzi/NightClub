@@ -14,6 +14,9 @@ marcos = Cliente "Marcos" 40 [rodri]
 bajarResistencia cuánto cliente =
   nuevaResistencia (resistencia cliente - cuánto) cliente
 
+aumentarResistencia cuánto =
+  bajarResistencia (cuánto * (-1))
+
 afectarAmigos criterio cliente =
   cliente {
     amigos = (map criterio . amigos) cliente
@@ -33,7 +36,9 @@ grogXD = nuevaResistencia 0
 klusener nombre =
   bajarResistencia ((fromIntegral . length) nombre)
 
-
+rescatarse tiempo
+  | tiempo > 3 = aumentarResistencia 200
+  | otherwise = aumentarResistencia 100
 
 
 
